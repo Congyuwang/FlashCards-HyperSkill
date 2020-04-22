@@ -28,7 +28,10 @@ public class Main {
         // import at startup
         String importPath = parameters.get(Parameters.IMPORT);
         if (!"".equals(importPath)) {
-            cards = importRecords(logger, importPath);
+            CardCollection temp = importRecords(logger, importPath);
+            if (temp != null) {
+                cards = temp;
+            }
         }
 
         // main loop
@@ -71,7 +74,10 @@ public class Main {
             if (command.equals("import")) {
                 Util.output(logger, "File name:\n> ");
                 String filePath = Util.getInput(logger, scanner);
-                cards = importRecords(logger, filePath);
+                CardCollection temp = importRecords(logger, filePath);
+                if (temp != null) {
+                    cards = temp;
+                }
                 continue;
             }
 

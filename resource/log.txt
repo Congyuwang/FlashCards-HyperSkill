@@ -1,0 +1,70 @@
+Import failed: file not found.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> China
+The definition of card:
+> Beijing
+The pair ("China":"Beijing") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> Russia
+The definition of card:
+> Moscow
+The pair ("Russia":"Moscow") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> United States
+The definition of card:
+> Washington
+The pair ("United States":"Washington") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> United Kingdom
+The definition of card:
+> London
+The pair ("United Kingdom":"London") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> Japan
+The definition of card:
+> Tokyo
+The pair ("Japan":"Tokyo") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> Madrid
+The definition of card:
+> Spain
+The pair ("Madrid":"Spain") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> remove
+The card:
+> Madrid
+The card has been removed.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> add
+The card:
+> Spain
+The definition of card:
+> Madrid
+The pair ("Spain":"Madrid") has been added.
+
+Input the action (add, remove, import, export, ask, exit, log, hardest card, reset stats):
+> exit
+Bye bye!
+
+6 cards have been saved.
+

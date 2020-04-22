@@ -1,0 +1,22 @@
+Card Collections
+6
+TERM DEFINITION 
+TERM DEFINITION FAILURE 
+United States
+Washington
+
+China
+Beijing
+
+Japan
+Tokyo
+
+United Kingdom
+London
+
+Russia
+Moscow
+
+Spain
+Madrid
+
