@@ -197,6 +197,8 @@ public class CardCollection implements Iterable<Card> {
         int copySize;
         LinkedHashSet<CardProperty> copyKeys = new LinkedHashSet<>();
         LinkedHashSet<CardProperty> cardProperties = new LinkedHashSet<>();
+        CardCollection cardCollection;
+
         try {
             // title
             String header = scanner.nextLine();
@@ -227,19 +229,13 @@ public class CardCollection implements Iterable<Card> {
                 }
                 cardProperties.add(property);
             }
-        } catch (Exception e) {
-            fileReader.close();
-            scanner.close();
-            throw new ImportException("illegal import file");
-        }
 
-        // initialization
-        CardProperty[] keys = new CardProperty[copyKeys.size()];
-        copyKeys.toArray(keys);
-        CardCollection cardCollection = new CardCollection(keys);
+            // initialization
+            CardProperty[] keys = new CardProperty[copyKeys.size()];
+            copyKeys.toArray(keys);
+            cardCollection = new CardCollection(keys);
 
-        // read cards
-        try {
+            // read cards
             for (int i = 0; i < copySize; i++) {
                 Card newCard = new Card();
                 for (CardProperty p : cardProperties) {
@@ -248,15 +244,13 @@ public class CardCollection implements Iterable<Card> {
                 }
                 cardCollection.add(newCard);
             }
+
         } catch (Exception e) {
+            throw new ImportException("illegal import file");
+        } finally {
             fileReader.close();
             scanner.close();
-            throw new ImportException("illegal import file");
         }
-
-        fileReader.close();
-        scanner.close();
-
         return cardCollection;
     }
 
