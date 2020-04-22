@@ -228,6 +228,8 @@ public class CardCollection implements Iterable<Card> {
                 cardProperties.add(property);
             }
         } catch (Exception e) {
+            fileReader.close();
+            scanner.close();
             throw new ImportException("illegal import file");
         }
 
@@ -247,10 +249,13 @@ public class CardCollection implements Iterable<Card> {
                 cardCollection.add(newCard);
             }
         } catch (Exception e) {
+            fileReader.close();
+            scanner.close();
             throw new ImportException("illegal import file");
         }
 
         fileReader.close();
+        scanner.close();
 
         return cardCollection;
     }

@@ -20,7 +20,10 @@ public class Main {
         HashMap<Parameters, String> parameters = new HashMap<>();
 
         // read parameters
-        if (!readParameters(args, logger, parameters)) return;
+        if (!readParameters(args, logger, parameters)) {
+            scanner.close();
+            return;
+        }
 
         // import at startup
         String importPath = parameters.get(Parameters.IMPORT);
