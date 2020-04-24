@@ -174,7 +174,7 @@ public class Main {
     private static void remove(Logger logger, Scanner scanner, CardCollection cards) {
         Util.output(logger, "The card:\n> ");
         String term = Util.getInput(logger, scanner);
-        if (cards.getSize() == 0) {
+        if (cards.getSize() == 0 || !cards.contains(TERM, term)) {
             Util.output(logger, "Can't remove \"%s\": %s\n\n", term, "there is no such card.");
         } else {
             cards.remove(TERM, term);
